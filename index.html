@@ -4,17 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SUD Indigo · Section syndicale SUD · UES Indigo</title>
-<meta name="description" content="Site officiel de la section syndicale SUD au sein de l'UES Indigo (Indigo Park, Streeteo, Moovia). Vos droits, nos revendications, élections du CSE unique, contact.">
+<meta name="description" content="Site officiel de la section syndicale SUD au sein de l'UES Indigo (Indigo Park, Streeteo, Moovia). Vos droits, nos analyses, nos revendications, élections du CSE unique, contact.">
 <meta name="theme-color" content="#0A0616">
 <meta property="og:type" content="website">
+<meta property="og:title" content="SUD Indigo · Section syndicale SUD · UES Indigo">
+<meta property="og:description" content="Site officiel de la section syndicale SUD au sein de l'UES Indigo (Indigo Park, Streeteo, Moovia). Vos droits, nos analyses, nos revendications, élections du CSE unique, contact.">
 <meta property="og:image" content="https://sud-indigo.vercel.app/assets/hero.jpg">
 <link rel="icon" href="assets/logo.png">
-<meta property="og:title" content="SUD Indigo · Section syndicale SUD · UES Indigo">
-<meta property="og:description" content="Un syndicat qui lit, qui chiffre, et qui ne signe pas ce qui régresse. Vos droits, nos revendications, l'élection du CSE unique.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
+
 :root{
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -286,48 +287,139 @@ footer .logo-f{height:62px;margin-bottom:18px}
   .f-grid{grid-template-columns:1fr}
   .legal{flex-direction:column;gap:8px}
 }
+/* ---------- page Vos droits ---------- */
+.page-hero{position:relative;background:#120823;overflow:hidden;padding:150px 0 76px}
+.page-hero-bg{position:absolute;inset:0;background:
+  radial-gradient(1000px 520px at 78% 15%,rgba(238,31,168,.30),transparent 60%),
+  radial-gradient(900px 600px at 10% 90%,rgba(124,58,237,.42),transparent 62%),
+  linear-gradient(160deg,#1B0A34,#120823 55%,#2A0F52)}
+.page-hero-in{position:relative;max-width:1460px;padding-left:clamp(22px,3.6vw,58px);padding-right:clamp(22px,3.6vw,58px);color:#fff}
+.page-hero h1{font-family:var(--serif);font-size:clamp(36px,5vw,66px);line-height:1.06;font-weight:400;letter-spacing:-.015em;color:#fff;margin:14px 0 0;max-width:19ch}
+.page-hero .lead{color:rgba(255,255,255,.78);max-width:64ch;margin-top:20px}
+.page-hero .btn-ghost{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.42);color:#fff}
+.crumb{display:flex;gap:10px;align-items:center;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.55)}
+.crumb a{text-decoration:none;color:rgba(255,255,255,.8)}
+.crumb a:hover{color:#fff}
+.doc-sec{padding-top:64px}
+.doc{display:grid;grid-template-columns:262px 1fr;gap:60px;align-items:start;max-width:1240px}
+.toc{position:sticky;top:112px}
+.toc-title{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--magenta);margin:0 0 14px}
+.toc-group{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);margin:20px 0 6px}
+.toc a{display:block;padding:7px 0 7px 14px;border-left:2px solid var(--line);text-decoration:none;font-size:14.5px;color:var(--muted);transition:border-color .2s,color .2s}
+.toc a:hover{color:var(--violet);border-left-color:var(--violet2)}
+.toc a.on{color:var(--ink);font-weight:600;border-left-color:var(--magenta)}
+.toc a.btn-primary{color:#fff;border-left:0;padding:10px 18px}
+.toc-cta{margin-top:28px;padding:20px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.toc-cta p{font-size:14.5px;color:var(--muted);margin:0 0 14px}
+.fiches{min-width:0}
+.fiche{padding:0 0 54px;margin-bottom:54px;border-bottom:1px solid var(--line);scroll-margin-top:110px}
+.fiche:last-of-type{border-bottom:0}
+.fiche-num{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--magenta)}
+.fiche h2{margin:14px 0 16px;max-width:26ch;font-size:clamp(27px,3.1vw,38px)}
+.chapeau{font-size:18px;line-height:1.62;color:var(--ink);max-width:70ch}
+.fiche h3{margin:30px 0 12px;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
+.fiche ul{margin:0 0 16px;padding-left:22px;color:var(--muted)}
+.fiche li{margin-bottom:10px;max-width:74ch}
+.fiche li b,.fiche p b{color:var(--ink);font-weight:700}
+.fiche p{color:var(--muted);max-width:74ch}
+.callout{margin:24px 0;padding:24px 26px;border-radius:18px;background:linear-gradient(135deg,rgba(124,58,237,.10),rgba(238,31,168,.08));border:1px solid rgba(124,58,237,.22)}
+.callout b{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:8px}
+.callout p{margin:0;color:var(--ink);font-size:15.5px}
+.fiche .ref{display:block;margin-top:22px;font-size:12.5px;color:var(--muted2);border-top:1px solid var(--line);padding-top:12px;line-height:1.6;max-width:none}
+.fiche-end{padding:34px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);text-align:center}
+.fiche-end h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:0 0 8px;text-transform:none;letter-spacing:-.01em;color:var(--ink)}
+.fiche-end p{color:var(--muted);margin:0 0 20px}
+.fiche-end .hero-cta{justify-content:center;margin-top:0}
+.nav-links a.current{color:#fff;font-weight:700}
+header.nav.scrolled .nav-links a.current{color:var(--violet)}
+@media (max-width:980px){
+  .doc{grid-template-columns:1fr;gap:34px}
+  .toc{position:static;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  .toc a{display:inline-block;border-left:0;border-bottom:2px solid var(--line);margin:0 10px 8px 0;padding:4px 0}
+  .toc-group{margin-top:14px}
+}
+@media (max-width:760px){
+  .page-hero{padding:118px 0 56px}
+  .fiche{padding-bottom:40px;margin-bottom:40px}
+  .chapeau{font-size:16.5px}
+}
+
+
+/* ---------- nav lisible sur image ---------- */
+header.nav{background:linear-gradient(to bottom,rgba(8,4,18,.78),rgba(8,4,18,.25) 60%,rgba(8,4,18,0));border-bottom:0}
+header.nav .nav-links a{text-shadow:0 1px 12px rgba(8,4,18,.6)}
+header.nav.scrolled{border-bottom:1px solid var(--line)}
+header.nav.scrolled .nav-links a{text-shadow:none}
+/* ---------- pages internes ---------- */
+.doc-narrow{max-width:860px}
+.doc-narrow h2{max-width:24ch}
+.doc-narrow p,.doc-narrow li{color:var(--muted)}
+.doc-narrow .chapeau{color:var(--ink);font-size:18px;line-height:1.62}
+.doc-narrow h2{margin-top:0}
+.doc-narrow h2 + p,.doc-narrow .chapeau + p{margin-top:0}
+ul.plain{list-style:none;padding:0;margin:0 0 18px}
+ul.plain li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--muted);max-width:74ch}
+ul.plain li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:50%;background:linear-gradient(120deg,var(--violet2),var(--magenta))}
+ul.plain li b{color:var(--ink)}
+.mesure{margin-top:22px;padding:16px 20px;border-radius:14px;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.20);color:var(--ink);font-size:15.5px;max-width:74ch}
+.mesure b{color:var(--violet)}
+.qa{padding:18px 0;border-bottom:1px solid var(--line);max-width:74ch}
+.qa:last-of-type{border-bottom:0}
+.qa b{display:block;color:var(--ink);font-size:17px;margin-bottom:6px}
+.qa p{margin:0;color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:24px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:15px;min-width:560px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tbl th{text-align:left;padding:14px 16px;background:var(--bg2);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);font-weight:800}
+.tbl td{padding:14px 16px;border-top:1px solid var(--line);color:var(--muted)}
+.tbl td.ok{color:var(--violet);font-weight:700}
+.tbl td.ko{color:var(--magenta);font-weight:700}
+.next-cta{background:linear-gradient(130deg,var(--violet),var(--magenta));color:#fff;padding:clamp(34px,5vw,56px) 0}
+.next-cta h2{color:#fff;margin:0 0 10px;max-width:22ch}
+.next-cta p{color:rgba(255,255,255,.85);max-width:58ch;margin:0 0 24px}
+.next-cta .btn-ghost{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);color:#fff}
+.next-cta .btn-light{background:#fff;color:var(--violet)}
+.page-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.page-nav a{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;text-decoration:none;font-size:13.5px;font-weight:600}
+.page-nav a:hover{background:rgba(255,255,255,.18)}
+
 </style>
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="SUD Indigo, accueil"><span class="lg brand-lg" role="img" aria-label="SUD Indigo"></span></a>
+    <a class="brand" href="./" aria-label="SUD Indigo, accueil"><span class="lg brand-lg" role="img" aria-label="SUD Indigo"></span></a>
     <nav class="nav-links">
-      <a href="#syndicat">Le syndicat</a>
+      <a href="syndicat/">Le syndicat</a>
       <a href="droits/">Vos droits</a>
-      <a href="#analyses">Nos analyses</a>
-      <a href="#revendications">Revendications</a>
-      <a href="#elections">Élections</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-primary btn-sm" href="#contact">Nous contacter</a>
+      <a href="analyses/">Nos analyses</a>
+      <a href="revendications/">Revendications</a>
+      <a href="elections/">Élections</a>
+      <a href="contact/">Contact</a>
+      <a class="btn btn-primary btn-sm" href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">Nous écrire</a>
     </nav>
     <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span></button>
   </div>
   <div class="mobile" id="mobile">
-    <a href="#syndicat">Le syndicat</a>
+    <a href="syndicat/">Le syndicat</a>
     <a href="droits/">Vos droits</a>
-    <a href="#analyses">Nos analyses</a>
-    <a href="#revendications">Revendications</a>
-    <a href="#elections">Élections CSE</a>
-    <a href="#contact">Contact</a>
-    <a class="btn btn-primary" href="#contact">Nous contacter</a>
+    <a href="analyses/">Nos analyses</a>
+    <a href="revendications/">Revendications</a>
+    <a href="elections/">Élections</a>
+    <a href="contact/">Contact</a>
+    <a class="btn btn-primary" href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">Nous écrire</a>
   </div>
 </header>
-
 <main id="top">
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-scrim"></div>
   <div class="wrap hero-in">
-    <span class="eyebrow"><span class="dot"></span>Section syndicale · UES Indigo</span>
     <span class="lg hero-logo" role="img" aria-label="Fédération SUD Indigo"></span>
     <h1>Un syndicat qui lit, qui chiffre, et qui <em class="mark">ne signe pas ce qui régresse.</em></h1>
     <p class="lead">La section syndicale SUD des salariées et salariés de l'UES Indigo · Indigo Park, Streeteo, Moovia. Agents de terrain, téléopératrices et téléopérateurs, chefs d'équipe, agents de maîtrise, fonctions support.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#contact">Nous contacter →</a>
+      <a class="btn btn-primary" href="contact/">Nous contacter →</a>
       <a class="btn btn-ghost" href="droits/">Connaître vos droits</a>
     </div>
     <div class="hero-facts">
@@ -367,6 +459,8 @@ footer .logo-f{height:62px;margin-bottom:18px}
       <div class="stat reveal"><b>26</b><span>sièges prévus au futur CSE unique</span></div>
       <div class="stat reveal"><b>3 → 1</b><span>comités fusionnés en un seul CSE</span></div>
     </div>
+
+    <div class="reveal" style="text-align:center;margin-top:34px"><a class="btn btn-ghost" href="syndicat/">Découvrir le syndicat →</a></div>
   </div>
 </section>
 
@@ -431,6 +525,8 @@ footer .logo-f{height:62px;margin-bottom:18px}
       </div>
     </div>
     <p class="note" style="max-width:80ch">Sources · avenants aux salaires minima IDCC 1090 publiés au Journal officiel, accords d'entreprise déposés et consultables sur la base nationale des accords, comptes publiés du groupe, procès-verbaux des réunions du comité, barème URSSAF des frais professionnels. Chaque élément est communicable sur demande.</p>
+
+    <div class="reveal" style="text-align:center;margin-top:34px"><a class="btn btn-ghost" href="analyses/">Voir toutes les analyses →</a></div>
   </div>
 </section>
 
@@ -450,6 +546,8 @@ footer .logo-f{height:62px;margin-bottom:18px}
       <div class="card reveal"><span class="num">05 · Frais</span><h3>2,70 € par jour de télétravail</h3><p>Le forfait admis par l'URSSAF, un accord à durée indéterminée, et l'ouverture effective du télétravail aux fonctions qui peuvent l'exercer.</p></div>
       <div class="card reveal"><span class="num">06 · Transparence</span><h3>Vous saurez qui a voté quoi</h3><p>Un compte rendu clair sous 7 jours après chaque réunion, chaque vote expliqué et nominatif, des permanences sur les sites, et la possibilité de nous saisir de façon anonyme.</p></div>
     </div>
+
+    <div class="reveal" style="text-align:center;margin-top:34px"><a class="btn btn-ghost" href="revendications/">Le détail des six priorités →</a></div>
   </div>
 </section>
 
@@ -488,6 +586,8 @@ footer .logo-f{height:62px;margin-bottom:18px}
       <div class="card reveal"><h3>Vous pouvez être relais</h3><p>Sur votre site, sans mandat et sans exposition. Remonter ce qui se passe, diffuser l'information, vérifier que les affichages existent.</p></div>
       <div class="card reveal"><h3>Vous pouvez juste voter</h3><p>C'est déjà décisif. Lors du précédent scrutin, moins de quatre employés sur dix se sont exprimés au premier tour et le quorum n'a pas été atteint.</p></div>
     </div>
+
+    <div class="reveal" style="text-align:center;margin-top:34px"><a class="btn btn-ghost" href="elections/">Tout sur les élections 2027 →</a></div>
   </div>
 </section>
 
@@ -530,11 +630,13 @@ footer .logo-f{height:62px;margin-bottom:18px}
         <p>Fédération SUD · Union syndicale Solidaires.</p>
       </div>
     </div>
+
+    <div class="reveal" style="text-align:center;margin-top:34px"><a class="btn btn-ghost" href="contact/">Page contact →</a></div>
   </div>
 </section>
 
-</main>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="f-grid">
@@ -544,60 +646,31 @@ footer .logo-f{height:62px;margin-bottom:18px}
       </div>
       <div>
         <h4>Le syndicat</h4>
-        <a href="#syndicat">Qui nous sommes</a>
-        <a href="#analyses">Nos analyses</a>
-        <a href="#revendications">Nos revendications</a>
+        <a href="./syndicat/">Qui nous sommes</a>
+        <a href="./analyses/">Nos analyses</a>
+        <a href="./revendications/">Nos revendications</a>
       </div>
       <div>
         <h4>Agir</h4>
+        <a href="./droits/">Vos droits</a>
+        <a href="./elections/">Élections CSE 2027</a>
         <a href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">Nous écrire</a>
-        <a href="#elections">Être candidat</a>
-        <a href="droits/">Vos droits</a>
       </div>
       <div>
         <h4>Contact</h4>
         <a href="tel:+33614912105">06 14 91 21 05</a>
         <a href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">lahouaria.ameurmessaoud@sud-indigo.com</a>
         <a href="mailto:lahouaria.ameurmessaoud-sud@group-indigo.com">lahouaria.ameurmessaoud-sud@group-indigo.com</a>
-        <a href="#mentions">Mentions légales</a>
-        <a href="#confidentialite">Confidentialité</a>
+        <a href="./mentions-legales/">Mentions légales</a>
+        <a href="./confidentialite/">Confidentialité</a>
       </div>
     </div>
-
-    <div class="legal-doc" id="mentions">
-      <details class="acc">
-        <summary>Mentions légales</summary>
-        <div class="acc-body">
-          <p><strong>Éditeur du site</strong> · Section syndicale SUD Indigo, organisation syndicale affiliée à la Fédération SUD, membre de l'Union syndicale Solidaires. Adresse de correspondance · 48 avenue du Général de Gaulle, 92800 Puteaux.</p>
-          <p><strong>Directrice de la publication</strong> · Lahouaria Ameur Messaoud.</p>
-          <p><strong>Contact</strong> · lahouaria.ameurmessaoud@sud-indigo.com · 06 14 91 21 05.</p>
-          <p><strong>Hébergement</strong> · Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.</p>
-          <p><strong>Nature du site</strong> · site d'information syndicale à destination des salariées et salariés de l'UES Indigo. Il est édité de façon indépendante et n'émane ni de la direction, ni du comité social et économique, ni d'aucune société du groupe. Les marques et dénominations citées appartiennent à leurs titulaires respectifs et ne sont mentionnées qu'à des fins d'identification du périmètre d'activité de la section syndicale.</p>
-          <p><strong>Contenus</strong> · les informations publiées sont issues de textes légaux et réglementaires, de conventions et accords collectifs publiés ou déposés, et de documents publics. Toute erreur signalée est corrigée sans délai. Un droit de réponse peut être exercé par simple message à l'adresse de contact.</p>
-          <p><strong>Propriété intellectuelle</strong> · les textes de ce site peuvent être reproduits librement par les salariés à des fins d'information syndicale, avec mention de la source.</p>
-        </div>
-      </details>
-
-      <details class="acc" id="confidentialite">
-        <summary>Politique de confidentialité</summary>
-        <div class="acc-body">
-          <p><strong>Aucun traceur.</strong> Ce site ne dépose aucun cookie publicitaire, n'utilise aucun outil de mesure d'audience et ne réalise aucun profilage. Aucune donnée n'est collectée par la seule consultation des pages.</p>
-          <p><strong>Données que vous transmettez</strong> · lorsque vous écrivez ou appelez, nous recevons vos coordonnées et les informations que vous choisissez de communiquer. Elles servent uniquement à vous répondre et, le cas échéant, à suivre votre dossier.</p>
-          <p><strong>Base légale</strong> · votre consentement, et l'intérêt légitime de l'organisation syndicale à assurer la défense des salariés. L'appartenance syndicale constitue une donnée sensible au sens de l'article 9 du RGPD et fait l'objet d'une protection renforcée.</p>
-          <p><strong>Destinataires</strong> · les seuls membres mandatés de la section syndicale. Aucune donnée n'est transmise à l'employeur, à un tiers commercial ou à un partenaire, ni vendue.</p>
-          <p><strong>Durée de conservation</strong> · le temps du traitement de votre demande, puis le temps nécessaire au suivi du dossier. Les messages sans suite sont supprimés au plus tard au bout de douze mois.</p>
-          <p><strong>Vos droits</strong> · accès, rectification, effacement, limitation et opposition, par simple message à l'adresse de contact. Vous pouvez introduire une réclamation auprès de la CNIL.</p>
-        </div>
-      </details>
-    </div>
-
     <div class="legal">
       <span>© 2026 SUD Indigo · Fédération SUD · Union syndicale Solidaires</span>
       <span>Tous les chiffres cités proviennent de documents officiels vérifiables.</span>
     </div>
   </div>
 </footer>
-
 <script>
 (function(){
   var b=document.getElementById('burger'),m=document.getElementById('mobile');
@@ -613,12 +686,16 @@ footer .logo-f{height:62px;margin-bottom:18px}
     },{threshold:.12,rootMargin:'0px 0px -60px 0px'});
     els.forEach(function(el,i){ el.style.transitionDelay=(Math.min(i%4,3)*70)+'ms'; io.observe(el); });
   } else { els.forEach(function(el){el.classList.add('in');}); }
-  document.querySelectorAll('a[href="#mentions"],a[href="#confidentialite"]').forEach(function(a){
-    a.addEventListener('click',function(){
-      var t=document.querySelector(a.getAttribute('href'));
-      if(t){ var d=t.tagName==='DETAILS'?t:t.querySelector('details'); if(d) d.open=true; }
-    });
-  });
+  var secs=[].slice.call(document.querySelectorAll('.fiche'));
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  if('IntersectionObserver' in window && secs.length){
+    var so=new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){
+        links.forEach(function(l){ l.classList.toggle('on', l.getAttribute('href')==='#'+e.target.id); });
+      }});
+    },{rootMargin:'-120px 0px -70% 0px'});
+    secs.forEach(function(s){so.observe(s);});
+  }
 })();
 </script>
 </body>
