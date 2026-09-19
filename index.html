@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SUD Indigo · Section syndicale SUD · UES Indigo</title>
 <meta name="description" content="Site officiel de la section syndicale SUD au sein de l'UES Indigo (Indigo Park, Streeteo, Moovia). Vos droits, nos revendications, élections du CSE unique, adhésion.">
-<meta name="theme-color" content="#FBF9FF">
+<meta name="theme-color" content="#0A0616">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sud-indigo.vercel.app/assets/hero.jpg">
 <link rel="icon" href="assets/logo.png">
@@ -19,34 +19,34 @@
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#FBF9FF;
-  --bg2:#F4EFFF;
+  --bg:#FAF7F2;
+  --bg2:#F2ECE2;
   --card:#FFFFFF;
-  --ink:#170B29;
-  --muted:#5D5476;
-  --muted2:#857CA0;
-  --line:rgba(23,11,41,.11);
-  --line2:rgba(23,11,41,.20);
+  --ink:#1A1026;
+  --muted:#5E5468;
+  --muted2:#8B8296;
+  --line:rgba(26,16,38,.13);
+  --line2:rgba(26,16,38,.22);
   --violet:#5B21B6;
   --violet2:#7C3AED;
   --violet-deep:#38176F;
   --magenta:#C9137F;
   --magenta2:#EE1FA8;
   --dark:#1C0B36;
-  --max:1180px;
-  --shadow:0 1px 2px rgba(23,11,41,.05),0 10px 30px -18px rgba(56,23,111,.35);
+  --max:1240px;
+  --shadow:0 1px 2px rgba(26,16,38,.05),0 10px 30px -18px rgba(56,23,111,.28);
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --serif:'Instrument Serif','Iowan Old Style',Georgia,'Times New Roman',serif;
   --logo:url("assets/logo.png");
   --logo-white:url("assets/logo-white.png");
   --hero:url("assets/hero.jpg");
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#FBF9FF;--ink:#170B29;}}
-:root[data-theme="dark"]{--bg:#FBF9FF;--ink:#170B29;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#FAF7F2;--ink:#1A1026;}}
+:root[data-theme="dark"]{--bg:#FAF7F2;--ink:#1A1026;}
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(86px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:#FBF9FF;color:var(--ink);
+  margin:0;background:#FAF7F2;color:var(--ink);
   font-family:var(--sans);font-size:17px;line-height:1.62;font-weight:400;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
@@ -60,11 +60,26 @@ section{position:relative}
 
 /* ---------- nav ---------- */
 header.nav{
-  position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
-  background:rgba(251,249,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  background:transparent;border-bottom:1px solid rgba(255,255,255,.16);
+  padding-top:env(safe-area-inset-top,0px);
+  transition:background .35s ease,border-color .35s ease,box-shadow .35s ease;
 }
-.nav-in{display:flex;align-items:center;gap:18px;height:80px}
+header.nav.scrolled{background:rgba(250,247,242,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line);box-shadow:0 1px 24px rgba(26,16,38,.07)}
+.nav-in{display:flex;align-items:center;gap:18px;height:86px;max-width:1460px;padding-left:clamp(22px,3.6vw,58px);padding-right:clamp(22px,3.6vw,58px)}
+header.nav .brand-lg{background-image:var(--logo-white)}
+header.nav.scrolled .brand-lg{background-image:var(--logo)}
+header.nav .nav-links a{color:rgba(255,255,255,.88)}
+header.nav .nav-links a:hover{color:#fff}
+header.nav.scrolled .nav-links a{color:var(--muted)}
+header.nav.scrolled .nav-links a:hover{color:var(--violet)}
+header.nav .nav-links a.btn-primary,header.nav.scrolled .nav-links a.btn-primary{color:#fff}
+header.nav .burger{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4)}
+header.nav .burger span,header.nav .burger span::before,header.nav .burger span::after{background:#fff}
+header.nav.scrolled .burger{background:#fff;border-color:var(--line2)}
+header.nav.scrolled .burger span,header.nav.scrolled .burger span::before,header.nav.scrolled .burger span::after{background:var(--ink)}
+.mobile{background:#140A24;border-top-color:rgba(255,255,255,.12)}
+.mobile a{color:#fff;border-bottom-color:rgba(255,255,255,.12)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto}
 .brand-lg{height:52px}
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:26px}
@@ -94,12 +109,12 @@ header.nav{
 .mobile .btn{margin-top:18px;width:100%}
 
 /* ---------- hero plein écran ---------- */
-.hero{position:relative;min-height:calc(100svh - 80px);display:flex;align-items:flex-end;overflow:hidden;background:#0A0616}
-.hero-bg{position:absolute;inset:0;background-image:var(--hero);background-size:cover;background-position:58% center;background-repeat:no-repeat}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#0A0616}
+.hero-bg{position:absolute;inset:0;background-image:var(--hero);background-size:cover;background-position:60% center;background-repeat:no-repeat}
 .hero-scrim{position:absolute;inset:0;background:
-  linear-gradient(95deg,rgba(8,4,18,.93) 0%,rgba(8,4,18,.78) 38%,rgba(8,4,18,.42) 70%,rgba(8,4,18,.55) 100%),
-  linear-gradient(to top,rgba(8,4,18,.94) 0%,rgba(8,4,18,.30) 45%,rgba(8,4,18,.55) 100%)}
-.hero-in{position:relative;width:100%;padding-top:92px;padding-bottom:74px;color:#fff}
+  linear-gradient(95deg,rgba(8,4,18,.82) 0%,rgba(8,4,18,.60) 32%,rgba(8,4,18,.14) 66%,rgba(8,4,18,.26) 100%),
+  linear-gradient(to top,rgba(8,4,18,.68) 0%,rgba(8,4,18,.06) 48%,rgba(8,4,18,.42) 100%)}
+.hero-in{position:relative;width:100%;max-width:1460px;padding-left:clamp(22px,3.6vw,58px);padding-right:clamp(22px,3.6vw,58px);padding-top:120px;padding-bottom:78px;color:#fff}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;
   border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.10);backdrop-filter:blur(8px);
@@ -107,8 +122,9 @@ header.nav{
 }
 .dot{width:7px;height:7px;border-radius:50%;background:var(--magenta2);box-shadow:0 0 0 4px rgba(238,31,168,.22)}
 .hero-logo{height:112px;margin:22px 0 2px;background-image:var(--logo-white)}
-h1{font-size:clamp(34px,4.6vw,62px);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:10px 0 0;max-width:19ch;color:#fff;text-shadow:0 2px 30px rgba(8,4,18,.55)}
+h1{font-family:var(--serif);font-size:clamp(40px,5.6vw,76px);line-height:1.04;letter-spacing:-.018em;font-weight:400;margin:10px 0 0;max-width:17ch;color:#fff;text-shadow:0 2px 34px rgba(8,4,18,.6)}
 h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.005em}
+h1 .mark{font-style:italic}
 .mark{background:linear-gradient(100deg,#B98BFF,#FF54C4);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:clamp(16px,1.7vw,18.5px);color:rgba(255,255,255,.82);max-width:62ch;margin:18px 0 0;line-height:1.6}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
@@ -136,10 +152,15 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-sp
 .sec.dark .sub,.sec.dark p{color:rgba(244,239,255,.74)}
 .sec.dark h2 em{color:rgba(244,239,255,.68)}
 .sec.dark .glow{width:520px;height:520px;background:rgba(238,31,168,.34);bottom:-260px;right:-140px}
-.kicker{font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta);margin:0 0 18px;display:flex;align-items:center;gap:12px}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--magenta);margin:0 0 16px;display:flex;align-items:center;gap:12px}
 .kicker::before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--violet2),var(--magenta))}
 .sec.dark .kicker{color:#F79BDC}
-h2{font-size:clamp(30px,4.5vw,50px);line-height:1.08;letter-spacing:-.032em;font-weight:800;margin:0 0 20px;max-width:21ch}
+.head{text-align:center;max-width:840px;margin:0 auto 6px}
+.head .kicker{justify-content:center}
+.head .kicker::after{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--magenta),var(--violet2))}
+.head h2{margin-left:auto;margin-right:auto;max-width:24ch}
+.head .sub{margin-left:auto;margin-right:auto}
+h2{font-family:var(--serif);font-size:clamp(32px,4.4vw,54px);line-height:1.1;letter-spacing:-.015em;font-weight:400;margin:0 0 20px;max-width:22ch}
 h2 em{color:var(--muted)}
 h3{font-size:19.5px;line-height:1.32;letter-spacing:-.02em;font-weight:700;margin:0 0 10px}
 p{margin:0 0 16px}
@@ -241,8 +262,10 @@ footer .logo-f{height:62px;margin-bottom:18px}
   .sec{padding:66px 0}
   .hero{min-height:calc(100svh - 80px)}
   .hero-bg{background-position:62% center}
-  .hero-in{padding-top:54px;padding-bottom:58px}
-  .hero-logo{height:90px;margin:16px 0 2px}
+  .nav-in{height:74px}
+  .hero-in{padding-top:104px;padding-bottom:52px}
+  .hero-logo{margin-top:12px}
+  .hero-logo{height:84px;margin:12px 0 2px}
   .hero .lead{margin-top:14px;font-size:15.5px}
   .hero-cta{margin-top:20px;gap:10px}
   .hero-facts{margin-top:16px}
@@ -321,7 +344,7 @@ footer .logo-f{height:62px;margin-bottom:18px}
 <!-- LE SYNDICAT -->
 <section class="sec" id="syndicat">
   <div class="wrap">
-    <div class="reveal">
+    <div class="reveal head">
       <p class="kicker">Le syndicat</p>
       <h2>Une section syndicale de salariés, <em>pas un appareil.</em></h2>
       <p class="sub">SUD Indigo réunit des salariées et des salariés de l'UES Indigo qui exercent le métier tous les jours. La section est affiliée à la Fédération SUD, membre de l'Union syndicale Solidaires. Elle ne dépend d'aucune direction, d'aucun parti, d'aucune carrière syndicale.</p>
@@ -344,7 +367,7 @@ footer .logo-f{height:62px;margin-bottom:18px}
 <!-- VOS DROITS -->
 <section class="sec alt" id="droits">
   <div class="wrap">
-    <div class="reveal">
+    <div class="reveal head">
       <p class="kicker">Vos droits</p>
       <h2>Ce que la loi vous garantit, <em>noir sur blanc.</em></h2>
       <p class="sub">Des fiches courtes, avec les articles du code du travail et les textes de référence. Vous pouvez tout vérifier par vous-même sur Légifrance. Si un point vous concerne, écrivez-nous, nous répondons sous 48 heures.</p>
@@ -502,7 +525,7 @@ footer .logo-f{height:62px;margin-bottom:18px}
 <section class="sec dark" id="analyses">
   <div class="glow"></div>
   <div class="wrap" style="position:relative">
-    <div class="reveal">
+    <div class="reveal head">
       <p class="kicker">Nos analyses</p>
       <h2 style="color:#fff">Des faits sourcés, <em>pas des slogans.</em></h2>
       <p class="sub">Nous avons dépouillé les accords déposés, les avenants de la convention collective publiés au Journal officiel, les procès-verbaux du comité et les comptes publiés. Voici trois constats, chiffrés, que chacun peut vérifier.</p>
@@ -537,7 +560,7 @@ footer .logo-f{height:62px;margin-bottom:18px}
 <!-- REVENDICATIONS -->
 <section class="sec" id="revendications">
   <div class="wrap">
-    <div class="reveal">
+    <div class="reveal head">
       <p class="kicker">Nos revendications</p>
       <h2>Six priorités, <em>chiffrées et défendables.</em></h2>
       <p class="sub">Pas une liste de vœux. Chaque point est traduisible en clause d'accord, et chacun se mesure.</p>
@@ -556,7 +579,7 @@ footer .logo-f{height:62px;margin-bottom:18px}
 <!-- ELECTIONS -->
 <section class="sec alt" id="elections">
   <div class="wrap">
-    <div class="reveal">
+    <div class="reveal head">
       <p class="kicker">Élections professionnelles</p>
       <h2>Un seul comité, <em>un seul rendez-vous.</em></h2>
       <p class="sub">Les trois comités d'Indigo Park, Streeteo et Moovia laissent place à un comité social et économique unique au périmètre de l'UES. L'accord conclu prévoit 26 sièges. C'est le scrutin qui fixera pour quatre ans le rapport de force.</p>
@@ -726,6 +749,9 @@ footer .logo-f{height:62px;margin-bottom:18px}
   var b=document.getElementById('burger'),m=document.getElementById('mobile');
   b.addEventListener('click',function(){m.classList.toggle('open');});
   m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');});});
+  var nav=document.querySelector('header.nav');
+  var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>60); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
   var els=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(en){
