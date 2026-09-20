@@ -410,6 +410,33 @@ header.nav.menu-open .burger b{color:#fff}
 header.nav.menu-open .burger span,header.nav.menu-open .burger span::before,header.nav.menu-open .burger span::after{background:#fff}
 header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
 
+/* ---------- bulle question + traceur ---------- */
+#bulle{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:9px;padding:13px 19px;border:0;border-radius:999px;background:linear-gradient(120deg,var(--violet),var(--magenta));color:#fff;font-family:inherit;font-size:14.5px;font-weight:800;cursor:pointer;box-shadow:0 16px 34px -12px rgba(124,58,237,.7)}
+#bulle:hover{transform:translateY(-2px)}
+#bulle svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#bulle.off{display:none}
+#boite{position:fixed;right:18px;bottom:18px;z-index:81;width:min(380px,calc(100vw - 32px));max-height:min(620px,calc(100svh - 36px));overflow-y:auto;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 34px 70px -24px rgba(26,16,38,.45);display:none}
+#boite.on{display:block}
+#boite .bt{padding:18px 20px 14px;background:linear-gradient(130deg,var(--violet),var(--magenta));color:#fff;border-radius:22px 22px 0 0;position:relative}
+#boite .bt b{display:block;font-size:16.5px;font-weight:800}
+#boite .bt span{font-size:13px;color:rgba(255,255,255,.88);display:block;margin-top:4px;line-height:1.5}
+#boite .fermer{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;font-size:16px;cursor:pointer;line-height:1}
+#boite .bc{padding:18px 20px 22px}
+#boite label{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2);margin:0 0 6px}
+#boite input,#boite select,#boite textarea{width:100%;font-family:inherit;font-size:15px;color:var(--ink);background:var(--bg2);border:1px solid var(--line2);border-radius:12px;padding:11px 13px;margin-bottom:13px}
+#boite textarea{min-height:104px;resize:vertical}
+#boite .coche{display:flex;gap:9px;align-items:flex-start;margin:2px 0 14px;font-size:13.5px;color:var(--muted);line-height:1.5}
+#boite .coche input{width:17px;height:17px;margin:2px 0 0;flex:0 0 auto}
+#boite .env{width:100%;border:0;border-radius:999px;padding:13px;font-family:inherit;font-size:15px;font-weight:800;color:#fff;background:linear-gradient(120deg,var(--violet),var(--magenta));cursor:pointer}
+#boite .pied{font-size:12px;color:var(--muted2);margin:12px 0 0;line-height:1.55}
+#boite .etat{font-size:13.5px;margin:10px 0 0;min-height:18px}
+#boite .etat.ko{color:#B91C1C}
+#boite .ok{text-align:center;padding:14px 4px}
+#boite .ok b{display:block;font-size:17px;margin-bottom:8px}
+#boite .ok p{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+#piege{position:absolute;left:-9999px;opacity:0}
+@media(max-width:520px){#bulle{right:12px;bottom:12px;padding:12px 17px;font-size:14px}#boite{right:10px;left:10px;bottom:10px;width:auto}}
+
 </style>
 </head>
 <body>
@@ -583,6 +610,44 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
     </div>
   </div>
 </footer>
+
+<button id="bulle" type="button" aria-label="Poser une question à SUD Indigo">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.6-.7L3 21l1.9-5A8.3 8.3 0 0 1 4 11.5 8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg>
+  Une question ?
+</button>
+<div id="boite" role="dialog" aria-label="Poser une question">
+  <div class="bt">
+    <button class="fermer" id="bfermer" aria-label="Fermer">&#10005;</button>
+    <b>Posez votre question</b>
+    <span>Paie, planning, sécurité, sanction, droits. Réponse sous 48 heures. Vous pouvez écrire sans donner votre nom.</span>
+  </div>
+  <div class="bc" id="bcorps">
+    <label for="bsujet">Sujet</label>
+    <select id="bsujet">
+      <option>Salaire, paie, prime</option>
+      <option>Planning, temps de travail</option>
+      <option>Sécurité, agression, matériel</option>
+      <option>Sanction, convocation, litige</option>
+      <option>Harcèlement, conditions de travail</option>
+      <option>Télétravail</option>
+      <option>Élections du CSE</option>
+      <option>Autre</option>
+    </select>
+    <label for="bmsg">Votre message</label>
+    <textarea id="bmsg" placeholder="Décrivez votre situation, même brièvement."></textarea>
+    <div class="coche"><input type="checkbox" id="banon"><label for="banon" style="text-transform:none;letter-spacing:0;font-size:13.5px;font-weight:500;color:var(--muted);margin:0">Envoyer sans donner mon nom ni mes coordonnées</label></div>
+    <div id="bident">
+      <label for="bnom">Votre nom</label>
+      <input id="bnom" placeholder="Prénom et nom" autocomplete="name">
+      <label for="bcontact">Email ou téléphone</label>
+      <input id="bcontact" placeholder="Pour que nous puissions vous répondre" autocomplete="email">
+    </div>
+    <input id="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="env" id="benv" type="button">Envoyer</button>
+    <p class="etat" id="betat"></p>
+    <p class="pied">Message reçu uniquement par la section syndicale. Rien n'est transmis à l'employeur. Vous pouvez aussi écrire à lahouaria.ameurmessaoud@sud-indigo.com ou appeler le 06 14 91 21 05.</p>
+  </div>
+</div>
 <script>
 (function(){
   var b=document.getElementById('burger'),m=document.getElementById('mobile');
@@ -613,6 +678,48 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
     },{rootMargin:'-120px 0px -70% 0px'});
     secs.forEach(function(s){so.observe(s);});
   }
+})();
+
+(function(){
+  var b=document.getElementById('bulle'),x=document.getElementById('boite');
+  if(!b) return;
+  function ouvrir(o){ x.classList.toggle('on',o); b.classList.toggle('off',o); if(o){ var t=document.getElementById('bmsg'); if(t) t.focus(); } }
+  b.addEventListener('click',function(){ouvrir(true);});
+  document.getElementById('bfermer').addEventListener('click',function(){ouvrir(false);});
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') ouvrir(false); });
+  document.querySelectorAll('a[href$="#question"],a[data-question]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();ouvrir(true);});
+  });
+  var anon=document.getElementById('banon'),ident=document.getElementById('bident');
+  anon.addEventListener('change',function(){ ident.style.display=anon.checked?'none':'block'; });
+  var env=document.getElementById('benv'),etat=document.getElementById('betat');
+  env.addEventListener('click',async function(){
+    var msg=document.getElementById('bmsg').value.trim();
+    etat.className='etat';
+    if(msg.length<5){ etat.className='etat ko'; etat.textContent='Écrivez quelques mots de plus.'; return; }
+    env.disabled=true; env.textContent='Envoi...';
+    try{
+      var r=await fetch('/api/msg',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        sujet:document.getElementById('bsujet').value,
+        message:msg,
+        anonyme:anon.checked,
+        nom:document.getElementById('bnom').value,
+        contact:document.getElementById('bcontact').value,
+        site:document.getElementById('piege').value,
+        chemin:location.pathname
+      })});
+      var d=await r.json();
+      if(d.ok){
+        document.getElementById('bcorps').innerHTML='<div class="ok"><b>Message bien reçu.</b><p>Nous répondons sous 48 heures.'+(anon.checked?' Votre message est anonyme, nous ne pourrons pas vous recontacter directement · le sujet sera traité et, si nécessaire, porté en réunion sans citer personne.':'')+'</p></div>';
+      } else { etat.className='etat ko'; etat.textContent=d.erreur||'Envoi impossible. Écrivez à lahouaria.ameurmessaoud@sud-indigo.com'; env.disabled=false; env.textContent='Envoyer'; }
+    }catch(err){ etat.className='etat ko'; etat.textContent='Connexion impossible. Écrivez à lahouaria.ameurmessaoud@sud-indigo.com'; env.disabled=false; env.textContent='Envoyer'; }
+  });
+  try{
+    var s=sessionStorage.getItem('sud_s'); if(!s){ s=Math.random().toString(36).slice(2,12); sessionStorage.setItem('sud_s',s); }
+    fetch('/api/t',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({
+      chemin:location.pathname, referent:document.referrer||'', session:s
+    })}).catch(function(){});
+  }catch(e){}
 })();
 </script>
 </body>
