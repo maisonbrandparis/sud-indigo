@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Confidentialité · SUD Indigo</title>
-<meta name="description" content="Politique de confidentialité du site de la section syndicale SUD de l'UES Indigo · aucun traceur, aucune mesure d'audience.">
+<title>Confidentialité · UNSA Indigo</title>
+<meta name="description" content="Politique de confidentialité du site de la section syndicale UNSA de l'UES Indigo · aucun traceur, aucune mesure d'audience.">
 <meta name="theme-color" content="#120823">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Confidentialité · SUD Indigo">
-<meta property="og:description" content="Politique de confidentialité du site de la section syndicale SUD de l'UES Indigo · aucun traceur, aucune mesure d'audience.">
-<meta property="og:image" content="https://sud-indigo.vercel.app/assets/hero.jpg">
+<meta property="og:title" content="Confidentialité · UNSA Indigo">
+<meta property="og:description" content="Politique de confidentialité du site de la section syndicale UNSA de l'UES Indigo · aucun traceur, aucune mesure d'audience.">
+<meta property="og:image" content="https://unsa-indigo.vercel.app/assets/hero.jpg">
 <link rel="icon" href="../assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,22 +20,24 @@
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#FAF7F2;
-  --bg2:#F2ECE2;
+  --bg:#F8F7F4;
+  --bg2:#EDEEF2;
   --card:#FFFFFF;
   --ink:#1A1026;
   --muted:#5E5468;
   --muted2:#8B8296;
   --line:rgba(26,16,38,.13);
   --line2:rgba(26,16,38,.22);
-  --violet:#5B21B6;
-  --violet2:#7C3AED;
-  --violet-deep:#38176F;
+  --violet:#4C1B70;
+  --violet2:#6B2A99;
+  --violet-deep:#331052;
+  --bleu:#0094D4;
+  --bleu2:#2BB2EE;
   --magenta:#C9137F;
   --magenta2:#EE1FA8;
-  --dark:#1C0B36;
+  --dark:#140A2E;
   --max:1240px;
-  --shadow:0 1px 2px rgba(26,16,38,.05),0 10px 30px -18px rgba(56,23,111,.28);
+  --shadow:0 1px 2px rgba(20,10,46,.05),0 10px 30px -18px rgba(51,16,82,.28);
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --serif:'Instrument Serif','Iowan Old Style',Georgia,'Times New Roman',serif;
   --logo:url("../assets/logo.png");
@@ -43,8 +45,8 @@
   --hero:url("../assets/hero.jpg");
   --hero-mobile:url("../assets/hero-mobile.jpg");
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#FAF7F2;--ink:#1A1026;}}
-:root[data-theme="dark"]{--bg:#FAF7F2;--ink:#1A1026;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#F8F7F4;--ink:#1A1026;}}
+:root[data-theme="dark"]{--bg:#F8F7F4;--ink:#1A1026;}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(86px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
 body{
@@ -56,7 +58,7 @@ img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
 section{position:relative}
-.lg{display:block;aspect-ratio:640/467;background:var(--logo) center/contain no-repeat}
+.lg{display:block;aspect-ratio:387/420;background:var(--logo) center/contain no-repeat}
 
 .glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none}
 
@@ -83,7 +85,7 @@ header.nav.scrolled .burger span,header.nav.scrolled .burger span::before,header
 .mobile{background:#140A24;border-top-color:rgba(255,255,255,.12)}
 .mobile a{color:#fff;border-bottom-color:rgba(255,255,255,.12)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto}
-.brand-lg{height:52px}
+.brand-lg{height:62px}
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:26px}
 .nav-links a{text-decoration:none;font-size:14.5px;font-weight:600;color:var(--muted);transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--violet)}
@@ -93,8 +95,8 @@ header.nav.scrolled .burger span,header.nav.scrolled .burger span::before,header
   font-size:15px;font-weight:700;letter-spacing:-.01em;border:1px solid transparent;
   transition:transform .18s ease,box-shadow .2s ease,background .2s;
 }
-.btn-primary{background:linear-gradient(100deg,var(--violet),var(--magenta));color:#fff;box-shadow:0 10px 26px -12px rgba(201,19,127,.75)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(201,19,127,.85)}
+.btn-primary{background:linear-gradient(100deg,var(--bleu),var(--violet));color:#fff;box-shadow:0 10px 26px -12px rgba(0,148,212,.6)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(0,148,212,.75)}
 .btn-ghost{border-color:var(--line2);color:var(--ink);background:#fff}
 .btn-ghost:hover{background:var(--bg2)}
 .btn-light{background:#fff;color:var(--violet)}
@@ -112,7 +114,7 @@ header.nav.scrolled .burger span,header.nav.scrolled .burger span::before,header
 
 /* ---------- hero plein écran ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#0A0616}
-.hero-bg{position:absolute;inset:0;background-image:var(--hero);background-size:cover;background-position:60% center;background-repeat:no-repeat}
+.hero-bg{position:absolute;inset:0;background-image:var(--hero);background-size:cover;background-position:right center;background-repeat:no-repeat}
 .hero-scrim{position:absolute;inset:0;background:
   linear-gradient(95deg,rgba(8,4,18,.82) 0%,rgba(8,4,18,.60) 32%,rgba(8,4,18,.14) 66%,rgba(8,4,18,.26) 100%),
   linear-gradient(to top,rgba(8,4,18,.68) 0%,rgba(8,4,18,.06) 48%,rgba(8,4,18,.42) 100%)}
@@ -123,11 +125,11 @@ header.nav.scrolled .burger span,header.nav.scrolled .burger span::before,header
   font-size:12.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#fff
 }
 .dot{width:7px;height:7px;border-radius:50%;background:var(--magenta2);box-shadow:0 0 0 4px rgba(238,31,168,.22)}
-.hero-logo{height:112px;margin:22px 0 2px;background-image:var(--logo-white)}
+.hero-logo{height:122px;margin:18px 0 2px;background-image:var(--logo-white)}
 h1{font-family:var(--serif);font-size:clamp(40px,5.6vw,76px);line-height:1.04;letter-spacing:-.018em;font-weight:400;margin:10px 0 0;max-width:17ch;color:#fff;text-shadow:0 2px 34px rgba(8,4,18,.6)}
 h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.005em}
 h1 .mark{font-style:italic}
-.mark{background:linear-gradient(100deg,#B98BFF,#FF54C4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mark{background:linear-gradient(100deg,#5BC8F5,#C98BFF);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:clamp(16px,1.7vw,18.5px);color:rgba(255,255,255,.82);max-width:62ch;margin:18px 0 0;line-height:1.6}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
 .hero .btn-ghost{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.45);color:#fff;backdrop-filter:blur(8px)}
@@ -140,7 +142,7 @@ h1 .mark{font-style:italic}
 .scroll-hint i{display:block;width:1px;height:26px;background:linear-gradient(to bottom,rgba(255,255,255,.7),transparent)}
 
 /* ---------- marquee ---------- */
-.band{border-block:1px solid var(--line);background:linear-gradient(90deg,var(--violet),var(--magenta));overflow:hidden}
+.band{border-block:1px solid var(--line);background:linear-gradient(90deg,var(--bleu),var(--violet) 55%,var(--magenta));overflow:hidden}
 .marquee{display:flex;width:max-content;animation:slide 38s linear infinite;padding:15px 0}
 @keyframes slide{to{transform:translateX(-50%)}}
 .marquee span{padding:0 30px;font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.92);white-space:nowrap}
@@ -150,16 +152,16 @@ h1 .mark{font-style:italic}
 /* ---------- sections ---------- */
 .sec{padding:94px 0}
 .sec.alt{background:var(--bg2)}
-.sec.dark{background:linear-gradient(150deg,#2A0F52,#170B29 60%,#3A1070);color:#F4EFFF;overflow:hidden}
+.sec.dark{background:linear-gradient(150deg,#0B3C63,#140A2E 58%,#3E1569);color:#EFF4FF;overflow:hidden}
 .sec.dark .sub,.sec.dark p{color:rgba(244,239,255,.74)}
 .sec.dark h2 em{color:rgba(244,239,255,.68)}
-.sec.dark .glow{width:520px;height:520px;background:rgba(238,31,168,.34);bottom:-260px;right:-140px}
+.sec.dark .glow{width:520px;height:520px;background:rgba(0,148,212,.38);bottom:-260px;right:-140px}
 .kicker{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--magenta);margin:0 0 16px;display:flex;align-items:center;gap:12px}
-.kicker::before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--violet2),var(--magenta))}
-.sec.dark .kicker{color:#F79BDC}
+.kicker::before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--bleu),var(--magenta))}
+.sec.dark .kicker{color:#6FD2FF}
 .head{text-align:center;max-width:840px;margin:0 auto 6px}
 .head .kicker{justify-content:center}
-.head .kicker::after{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--magenta),var(--violet2))}
+.head .kicker::after{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--magenta),var(--bleu))}
 .head h2{margin-left:auto;margin-right:auto;max-width:24ch}
 .head .sub{margin-left:auto;margin-right:auto}
 h2{font-family:var(--serif);font-size:clamp(32px,4.4vw,54px);line-height:1.1;letter-spacing:-.015em;font-weight:400;margin:0 0 20px;max-width:22ch}
@@ -172,7 +174,7 @@ p{margin:0 0 16px}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
 .card{padding:28px;border-radius:20px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(23,11,41,.05),0 20px 40px -22px rgba(56,23,111,.5)}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(20,10,46,.05),0 20px 40px -22px rgba(51,16,82,.5)}
 .card p{color:var(--muted);font-size:15.5px;margin:0}
 a.droit-card{text-decoration:none;display:block}
 a.droit-card h3{transition:color .2s}
@@ -180,7 +182,7 @@ a.droit-card:hover h3{color:var(--violet)}
 .droits-grid{gap:16px}
 .card .num{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--magenta);display:block;margin-bottom:14px}
 .stat{padding:30px 26px;border-radius:20px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
-.stat b{display:block;font-size:clamp(34px,4.6vw,44px);line-height:1;letter-spacing:-.04em;font-weight:800;color:var(--violet)}
+.stat b{display:block;font-size:clamp(34px,4.6vw,44px);line-height:1;letter-spacing:-.04em;font-weight:800;color:#0076AB}
 .stat span{display:block;margin-top:12px;font-size:14px;color:var(--muted);line-height:1.5}
 
 /* ---------- contact perso ---------- */
@@ -198,7 +200,7 @@ a.droit-card:hover h3{color:var(--violet)}
 /* ---------- timeline ---------- */
 .tl{border-left:2px solid var(--line);padding-left:30px;margin-top:34px;display:grid;gap:34px}
 .tl-item{position:relative}
-.tl-item::before{content:"";position:absolute;left:-39px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--violet2)}
+.tl-item::before{content:"";position:absolute;left:-39px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--bleu)}
 .tl-item.hot::before{background:var(--magenta);border-color:var(--magenta);box-shadow:0 0 0 6px rgba(201,19,127,.14)}
 .tl-date{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta)}
 .tl-item h3{margin:8px 0 6px}
@@ -221,14 +223,14 @@ details.acc[open] summary::after{content:"–"}
 /* ---------- analyses ---------- */
 .fact{display:flex;gap:24px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:flex-start}
 .fact:last-child{border-bottom:0}
-.fact .big{flex:0 0 auto;min-width:170px;font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.03em;color:#F79BDC}
+.fact .big{flex:0 0 auto;min-width:170px;font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.03em;color:#6FD2FF}
 .fact h3{margin:0;color:#fff}
 .fact p{margin:6px 0 0;font-size:15.5px}
 .note{font-size:13.5px;color:var(--muted2);margin-top:22px}
 .sec.dark .note{color:rgba(244,239,255,.52)}
 
 /* ---------- bloc contact ---------- */
-.join{border-radius:26px;padding:clamp(30px,5vw,56px);background:linear-gradient(130deg,var(--violet),var(--magenta));color:#fff;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(91,33,182,.6)}
+.join{border-radius:26px;padding:clamp(30px,5vw,56px);background:linear-gradient(130deg,var(--bleu),var(--violet) 58%,var(--magenta));color:#fff;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(51,16,82,.6)}
 .join h2{color:#fff}
 .join h2 em{color:rgba(255,255,255,.72)}
 .join .kicker{color:rgba(255,255,255,.9)}
@@ -245,7 +247,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 40px;background:var(--bg2
 .f-grid h4{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);margin:0 0 16px;font-weight:800}
 .f-grid a{display:block;text-decoration:none;color:var(--muted);font-size:15px;padding:5px 0;transition:color .2s;word-break:break-word}
 .f-grid a:hover{color:var(--violet)}
-footer .logo-f{height:62px;margin-bottom:18px}
+footer .logo-f{height:74px;margin-bottom:18px}
 .legal{margin-top:42px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--muted2);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
 .legal-doc{margin-top:26px}
 .legal-doc .acc-body{font-size:14px}
@@ -264,7 +266,7 @@ footer .logo-f{height:62px;margin-bottom:18px}
   body{font-size:16.5px}
   .nav-links{display:none}
   .burger{display:flex}
-  .brand-lg{height:46px}
+  .brand-lg{height:54px}
   .sec{padding:66px 0}
   .hero{min-height:calc(100svh - 80px)}
   .hero-bg{background-image:var(--hero-mobile);background-position:center top}
@@ -272,11 +274,12 @@ footer .logo-f{height:62px;margin-bottom:18px}
   .nav-in{height:74px}
   .hero-in{padding-top:104px;padding-bottom:52px}
   .hero-logo{margin-top:12px}
-  .hero-logo{height:84px;margin:12px 0 2px}
+  .hero-logo{display:none}
   .hero .lead{margin-top:14px;font-size:15.5px}
   .hero-cta{margin-top:20px;gap:10px}
   .hero-facts{margin-top:16px}
   .hero-facts{gap:8px}
+  .hero-facts .chip:nth-child(1),.hero-facts .chip:nth-child(2){display:none}
   .chip{font-size:12.5px;padding:8px 13px}
   .scroll-hint{display:none}
   .contact-row{font-size:14.5px}
@@ -288,11 +291,11 @@ footer .logo-f{height:62px;margin-bottom:18px}
   .legal{flex-direction:column;gap:8px}
 }
 /* ---------- page Vos droits ---------- */
-.page-hero{position:relative;background:#120823;overflow:hidden;padding:150px 0 76px}
+.page-hero{position:relative;background:#120A24;overflow:hidden;padding:150px 0 76px}
 .page-hero-bg{position:absolute;inset:0;background:
-  radial-gradient(1000px 520px at 78% 15%,rgba(238,31,168,.30),transparent 60%),
-  radial-gradient(900px 600px at 10% 90%,rgba(124,58,237,.42),transparent 62%),
-  linear-gradient(160deg,#1B0A34,#120823 55%,#2A0F52)}
+  radial-gradient(1000px 520px at 78% 15%,rgba(0,148,212,.34),transparent 60%),
+  radial-gradient(900px 600px at 10% 90%,rgba(107,42,153,.46),transparent 62%),
+  linear-gradient(160deg,#170D2C,#120A24 55%,#0B3252)}
 .page-hero-in{position:relative;max-width:1460px;padding-left:clamp(22px,3.6vw,58px);padding-right:clamp(22px,3.6vw,58px);color:#fff}
 .page-hero h1{font-family:var(--serif);font-size:clamp(36px,5vw,66px);line-height:1.06;font-weight:400;letter-spacing:-.015em;color:#fff;margin:14px 0 0;max-width:19ch}
 .page-hero .lead{color:rgba(255,255,255,.78);max-width:64ch;margin-top:20px}
@@ -322,8 +325,8 @@ footer .logo-f{height:62px;margin-bottom:18px}
 .fiche li{margin-bottom:10px;max-width:74ch}
 .fiche li b,.fiche p b{color:var(--ink);font-weight:700}
 .fiche p{color:var(--muted);max-width:74ch}
-.callout{margin:24px 0;padding:24px 26px;border-radius:18px;background:linear-gradient(135deg,rgba(124,58,237,.10),rgba(238,31,168,.08));border:1px solid rgba(124,58,237,.22)}
-.callout b{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:8px}
+.callout{margin:24px 0;padding:24px 26px;border-radius:18px;background:linear-gradient(135deg,rgba(0,148,212,.10),rgba(107,42,153,.09));border:1px solid rgba(0,148,212,.22)}
+.callout b{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#0076AB;margin-bottom:8px}
 .callout p{margin:0;color:var(--ink);font-size:15.5px}
 .fiche .ref{display:block;margin-top:22px;font-size:12.5px;color:var(--muted2);border-top:1px solid var(--line);padding-top:12px;line-height:1.6;max-width:none}
 .fiche-end{padding:34px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);text-align:center}
@@ -359,10 +362,10 @@ header.nav.scrolled .nav-links a{text-shadow:none}
 .doc-narrow h2 + p,.doc-narrow .chapeau + p{margin-top:0}
 ul.plain{list-style:none;padding:0;margin:0 0 18px}
 ul.plain li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--muted);max-width:74ch}
-ul.plain li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:50%;background:linear-gradient(120deg,var(--violet2),var(--magenta))}
+ul.plain li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:50%;background:linear-gradient(120deg,var(--bleu),var(--violet2))}
 ul.plain li b{color:var(--ink)}
-.mesure{margin-top:22px;padding:16px 20px;border-radius:14px;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.20);color:var(--ink);font-size:15.5px;max-width:74ch}
-.mesure b{color:var(--violet)}
+.mesure{margin-top:22px;padding:16px 20px;border-radius:14px;background:rgba(0,148,212,.08);border:1px solid rgba(0,148,212,.22);color:var(--ink);font-size:15.5px;max-width:74ch}
+.mesure b{color:#0076AB}
 .qa{padding:18px 0;border-bottom:1px solid var(--line);max-width:74ch}
 .qa:last-of-type{border-bottom:0}
 .qa b{display:block;color:var(--ink);font-size:17px;margin-bottom:6px}
@@ -371,9 +374,9 @@ ul.plain li b{color:var(--ink)}
 .tbl{width:100%;border-collapse:collapse;font-size:15px;min-width:560px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .tbl th{text-align:left;padding:14px 16px;background:var(--bg2);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);font-weight:800}
 .tbl td{padding:14px 16px;border-top:1px solid var(--line);color:var(--muted)}
-.tbl td.ok{color:var(--violet);font-weight:700}
+.tbl td.ok{color:#0076AB;font-weight:700}
 .tbl td.ko{color:var(--magenta);font-weight:700}
-.next-cta{background:linear-gradient(130deg,var(--violet),var(--magenta));color:#fff;padding:clamp(34px,5vw,56px) 0}
+.next-cta{background:linear-gradient(130deg,var(--bleu),var(--violet) 58%,var(--magenta));color:#fff;padding:clamp(34px,5vw,56px) 0}
 .next-cta h2{color:#fff;margin:0 0 10px;max-width:22ch}
 .next-cta p{color:rgba(255,255,255,.85);max-width:58ch;margin:0 0 24px}
 .next-cta .btn-ghost{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);color:#fff}
@@ -411,13 +414,13 @@ header.nav.menu-open .burger span,header.nav.menu-open .burger span::before,head
 header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
 
 /* ---------- bulle question + traceur ---------- */
-#bulle{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:9px;padding:13px 19px;border:0;border-radius:999px;background:linear-gradient(120deg,var(--violet),var(--magenta));color:#fff;font-family:inherit;font-size:14.5px;font-weight:800;cursor:pointer;box-shadow:0 16px 34px -12px rgba(124,58,237,.7)}
+#bulle{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:9px;padding:13px 19px;border:0;border-radius:999px;background:linear-gradient(120deg,var(--bleu),var(--violet));color:#fff;font-family:inherit;font-size:14.5px;font-weight:800;cursor:pointer;box-shadow:0 16px 34px -12px rgba(0,148,212,.6)}
 #bulle:hover{transform:translateY(-2px)}
 #bulle svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 #bulle.off{display:none}
 #boite{position:fixed;right:18px;bottom:18px;z-index:81;width:min(380px,calc(100vw - 32px));max-height:min(620px,calc(100svh - 36px));overflow-y:auto;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 34px 70px -24px rgba(26,16,38,.45);display:none}
 #boite.on{display:block}
-#boite .bt{padding:18px 20px 14px;background:linear-gradient(130deg,var(--violet),var(--magenta));color:#fff;border-radius:22px 22px 0 0;position:relative}
+#boite .bt{padding:18px 20px 14px;background:linear-gradient(130deg,var(--bleu),var(--violet) 60%,var(--magenta));color:#fff;border-radius:22px 22px 0 0;position:relative}
 #boite .bt b{display:block;font-size:16.5px;font-weight:800}
 #boite .bt span{font-size:13px;color:rgba(255,255,255,.88);display:block;margin-top:4px;line-height:1.5}
 #boite .fermer{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;font-size:16px;cursor:pointer;line-height:1}
@@ -427,7 +430,7 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
 #boite textarea{min-height:104px;resize:vertical}
 #boite .coche{display:flex;gap:9px;align-items:flex-start;margin:2px 0 14px;font-size:13.5px;color:var(--muted);line-height:1.5}
 #boite .coche input{width:17px;height:17px;margin:2px 0 0;flex:0 0 auto}
-#boite .env{width:100%;border:0;border-radius:999px;padding:13px;font-family:inherit;font-size:15px;font-weight:800;color:#fff;background:linear-gradient(120deg,var(--violet),var(--magenta));cursor:pointer}
+#boite .env{width:100%;border:0;border-radius:999px;padding:13px;font-family:inherit;font-size:15px;font-weight:800;color:#fff;background:linear-gradient(120deg,var(--bleu),var(--violet));cursor:pointer}
 #boite .pied{font-size:12px;color:var(--muted2);margin:12px 0 0;line-height:1.55}
 #boite .etat{font-size:13.5px;margin:10px 0 0;min-height:18px}
 #boite .etat.ko{color:#B91C1C}
@@ -442,7 +445,7 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
 <body>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="../" aria-label="SUD Indigo, accueil"><span class="lg brand-lg" role="img" aria-label="SUD Indigo"></span></a>
+    <a class="brand" href="../" aria-label="UNSA Indigo, accueil"><span class="lg brand-lg" role="img" aria-label="UNSA Indigo"></span></a>
     <nav class="nav-links">
       <a href="../syndicat/">Le syndicat</a>
       <a href="../droits/">Vos droits</a>
@@ -450,7 +453,7 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
       <a href="../revendications/">Revendications</a>
       <a href="../elections/">Élections</a>
       <a href="../contact/">Contact</a>
-      <a class="btn btn-primary btn-sm" href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">Nous écrire</a>
+      <a class="btn btn-primary btn-sm" href="mailto:lahouaria.ameurmessaoud-unsa@group-indigo.com">Nous écrire</a>
     </nav>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><b>Menu</b></button>
   </div>
@@ -461,7 +464,7 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
     <a href="../revendications/">Revendications</a>
     <a href="../elections/">Élections</a>
     <a href="../contact/">Contact</a>
-    <a class="btn btn-primary" href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">Nous écrire</a>
+    <a class="btn btn-primary" href="mailto:lahouaria.ameurmessaoud-unsa@group-indigo.com">Nous écrire</a>
   </div>
 </header>
 <main id="top">
@@ -503,8 +506,8 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <span class="lg logo-f" role="img" aria-label="SUD Indigo"></span>
-        <p style="color:var(--muted);font-size:15px;max-width:38ch">Section syndicale SUD des salariées et salariés de l'UES Indigo. Site d'information syndicale, sans lien avec la direction de l'entreprise.</p>
+        <span class="lg logo-f" role="img" aria-label="UNSA Indigo"></span>
+        <p style="color:var(--muted);font-size:15px;max-width:38ch">Section syndicale UNSA des salariées et salariés de l'UES Indigo. Site d'information syndicale, sans lien avec la direction de l'entreprise.</p>
       </div>
       <div>
         <h4>Le syndicat</h4>
@@ -516,25 +519,24 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
         <h4>Agir</h4>
         <a href="../droits/">Vos droits</a>
         <a href="../elections/">Élections CSE 2027</a>
-        <a href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">Nous écrire</a>
+        <a href="mailto:lahouaria.ameurmessaoud-unsa@group-indigo.com">Nous écrire</a>
       </div>
       <div>
         <h4>Contact</h4>
         <a href="tel:+33614912105">06 14 91 21 05</a>
-        <a href="mailto:lahouaria.ameurmessaoud@sud-indigo.com">lahouaria.ameurmessaoud@sud-indigo.com</a>
-        <a href="mailto:lahouaria.ameurmessaoud-sud@group-indigo.com">lahouaria.ameurmessaoud-sud@group-indigo.com</a>
+        <a href="mailto:lahouaria.ameurmessaoud-unsa@group-indigo.com">lahouaria.ameurmessaoud-unsa@group-indigo.com</a>
         <a href="../mentions-legales/">Mentions légales</a>
         <a href="../confidentialite/">Confidentialité</a>
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 SUD Indigo · Fédération SUD · Union syndicale Solidaires</span>
+      <span>© 2026 UNSA Indigo · UNSA, Union nationale des syndicats autonomes</span>
       <span>Publication syndicale indépendante · article L.2142-5 du code du travail. Elle n'engage pas l'employeur et ne reflète pas sa position. Chiffres issus de documents publics.</span>
     </div>
   </div>
 </footer>
 
-<button id="bulle" type="button" aria-label="Poser une question à SUD Indigo">
+<button id="bulle" type="button" aria-label="Poser une question à UNSA Indigo">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.6-.7L3 21l1.9-5A8.3 8.3 0 0 1 4 11.5 8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg>
   Une question ?
 </button>
@@ -568,7 +570,7 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
     <input id="piege" tabindex="-1" autocomplete="off" aria-hidden="true">
     <button class="env" id="benv" type="button">Envoyer</button>
     <p class="etat" id="betat"></p>
-    <p class="pied">Message reçu uniquement par la section syndicale. Rien n'est transmis à l'employeur. Vous pouvez aussi écrire à lahouaria.ameurmessaoud@sud-indigo.com ou appeler le 06 14 91 21 05.</p>
+    <p class="pied">Message reçu uniquement par la section syndicale. Rien n'est transmis à l'employeur. Vous pouvez aussi écrire à lahouaria.ameurmessaoud-unsa@group-indigo.com ou appeler le 06 14 91 21 05.</p>
   </div>
 </div>
 <script>
@@ -634,11 +636,11 @@ header.nav.menu-open .burger[aria-expanded="true"] span{background:transparent}
       var d=await r.json();
       if(d.ok){
         document.getElementById('bcorps').innerHTML='<div class="ok"><b>Message bien reçu.</b><p>Nous répondons sous 48 heures.'+(anon.checked?' Votre message est anonyme, nous ne pourrons pas vous recontacter directement · le sujet sera traité et, si nécessaire, porté en réunion sans citer personne.':'')+'</p></div>';
-      } else { etat.className='etat ko'; etat.textContent=d.erreur||'Envoi impossible. Écrivez à lahouaria.ameurmessaoud@sud-indigo.com'; env.disabled=false; env.textContent='Envoyer'; }
-    }catch(err){ etat.className='etat ko'; etat.textContent='Connexion impossible. Écrivez à lahouaria.ameurmessaoud@sud-indigo.com'; env.disabled=false; env.textContent='Envoyer'; }
+      } else { etat.className='etat ko'; etat.textContent=d.erreur||'Envoi impossible. Écrivez à lahouaria.ameurmessaoud-unsa@group-indigo.com'; env.disabled=false; env.textContent='Envoyer'; }
+    }catch(err){ etat.className='etat ko'; etat.textContent='Connexion impossible. Écrivez à lahouaria.ameurmessaoud-unsa@group-indigo.com'; env.disabled=false; env.textContent='Envoyer'; }
   });
   try{
-    var s=sessionStorage.getItem('sud_s'); if(!s){ s=Math.random().toString(36).slice(2,12); sessionStorage.setItem('sud_s',s); }
+    var s=sessionStorage.getItem('unsa_s'); if(!s){ s=Math.random().toString(36).slice(2,12); sessionStorage.setItem('unsa_s',s); }
     fetch('/api/t',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({
       chemin:location.pathname, referent:document.referrer||'', session:s
     })}).catch(function(){});
